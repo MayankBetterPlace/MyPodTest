@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MyDemoPodTest"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.5"
   spec.summary      = "A CocoaPods library written in Swift"
 
   spec.description  = <<-DESC
