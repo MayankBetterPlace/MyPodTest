@@ -8,7 +8,7 @@
 import UIKit
 
 
-public final class MyData {
+open class MyData {
     public func printCommand() {
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print("This is just a demo SDK and this function can only print data")
