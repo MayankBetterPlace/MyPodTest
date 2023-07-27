@@ -9,12 +9,12 @@ import UIKit
 
 
 open class MyData {
-    static func printCommand() {
+    public static func printCommand() {
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print("This is just a demo SDK and this function can only print data")
     }
     
-    static func showAlert(controller: UIViewController) {
+    public static func showAlert(controller: UIViewController) {
         var dialogMessage = UIAlertController(title: "Attention", message: "I am an alert message to show SDK is working", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
