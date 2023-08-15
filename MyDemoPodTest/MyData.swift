@@ -22,4 +22,10 @@ open class MyData {
         dialogMessage.addAction(ok)
             controller.present(dialogMessage, animated: true, completion: nil)
     }
+    
+    public static func callAPI() {
+        UserEndpoints.publicApi.request { data in
+            print(data)
+        }
+    }
 }

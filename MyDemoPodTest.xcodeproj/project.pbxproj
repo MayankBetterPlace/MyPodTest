@@ -12,6 +12,11 @@
 		BA5CD6372A704A540009767E /* MyDemoPodTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CD6362A704A540009767E /* MyDemoPodTestTests.swift */; };
 		BA5CD6382A704A540009767E /* MyDemoPodTest.h in Headers */ = {isa = PBXBuildFile; fileRef = BA5CD62A2A704A540009767E /* MyDemoPodTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA5CD6422A704ABD0009767E /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CD6412A704ABD0009767E /* MyData.swift */; };
+		BA72220D2A8BD13C006B254E /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7222072A8BD13C006B254E /* Failure.swift */; };
+		BA72220E2A8BD13C006B254E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7222092A8BD13C006B254E /* Endpoints.swift */; };
+		BA7222102A8BD13C006B254E /* UserEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA72220B2A8BD13C006B254E /* UserEndpoints.swift */; };
+		BA7222112A8BD13C006B254E /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA72220C2A8BD13C006B254E /* Indicator.swift */; };
+		BA7222132A8BDDFD006B254E /* AlertsSimplified.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7222122A8BDDFD006B254E /* AlertsSimplified.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,11 @@
 		BA5CD6312A704A540009767E /* MyDemoPodTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDemoPodTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5CD6362A704A540009767E /* MyDemoPodTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDemoPodTestTests.swift; sourceTree = "<group>"; };
 		BA5CD6412A704ABD0009767E /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
+		BA7222072A8BD13C006B254E /* Failure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
+		BA7222092A8BD13C006B254E /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		BA72220B2A8BD13C006B254E /* UserEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEndpoints.swift; sourceTree = "<group>"; };
+		BA72220C2A8BD13C006B254E /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		BA7222122A8BDDFD006B254E /* AlertsSimplified.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsSimplified.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,10 @@
 			children = (
 				BA5CD62A2A704A540009767E /* MyDemoPodTest.h */,
 				BA5CD62B2A704A540009767E /* MyDemoPodTest.docc */,
+				BA7222082A8BD13C006B254E /* Endpoints */,
+				BA7222072A8BD13C006B254E /* Failure.swift */,
+				BA7222122A8BDDFD006B254E /* AlertsSimplified.swift */,
+				BA72220C2A8BD13C006B254E /* Indicator.swift */,
 				BA5CD6412A704ABD0009767E /* MyData.swift */,
 			);
 			path = MyDemoPodTest;
@@ -86,6 +100,15 @@
 				BA5CD6362A704A540009767E /* MyDemoPodTestTests.swift */,
 			);
 			path = MyDemoPodTestTests;
+			sourceTree = "<group>";
+		};
+		BA7222082A8BD13C006B254E /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				BA7222092A8BD13C006B254E /* Endpoints.swift */,
+				BA72220B2A8BD13C006B254E /* UserEndpoints.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA5CD62C2A704A540009767E /* MyDemoPodTest.docc in Sources */,
+				BA7222112A8BD13C006B254E /* Indicator.swift in Sources */,
+				BA72220D2A8BD13C006B254E /* Failure.swift in Sources */,
+				BA72220E2A8BD13C006B254E /* Endpoints.swift in Sources */,
+				BA7222132A8BDDFD006B254E /* AlertsSimplified.swift in Sources */,
 				BA5CD6422A704ABD0009767E /* MyData.swift in Sources */,
+				BA7222102A8BD13C006B254E /* UserEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
