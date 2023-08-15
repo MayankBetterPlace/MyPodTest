@@ -27,11 +27,12 @@ enum Enviroment {
         switch self {
         case .dev : return ""
         case .prod: return ""
-        case . stage: return ""
+        case .stage: return ""
         }
     }
 }
 typealias WebResponse = (NSDictionary) -> Void
+
 
 //MARK: - Common Properties and Configurations
 extension Endpoints {
@@ -65,14 +66,26 @@ extension Endpoints {
         guard let urlRequest = URL(string: self.url) else {
             return
         }
-        
         var rquest = URLRequest(url: urlRequest)
         rquest.httpMethod = self.method.methodType
+        
+        if let param = parameters {
+            guard let httpBody = try? JSONSerialization.data(withJSONObject: param, options: []) else {
+                return
+            }
+            rquest.httpBody = httpBody
+        }
+        
         let task = URLSession.shared.dataTask(with: rquest) { data, response, error in
-            if let data = data {
-                let image = UIImage(data: data)
-            } else if let error = error {
-                print("HTTP Request Failed \(error)")
+            self.handle(response, data, error, withHiddenError) { result in
+                print(result)
+                let scenes = UIApplication.shared.connectedScenes
+                let windowScene = scenes.first as? UIWindowScene
+                let window = windowScene?.windows.first
+                DispatchQueue.main.async {
+                    window?.rootViewController?.showAlertControllerWith(message: "Response Achieved")
+                }
+                
             }
         }
         
@@ -113,3 +126,4 @@ extension Endpoints {
         }
     }
 }
+
