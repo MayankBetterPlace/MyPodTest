@@ -79,13 +79,7 @@ extension Endpoints {
         let task = URLSession.shared.dataTask(with: rquest) { data, response, error in
             self.handle(response, data, error, withHiddenError) { result in
                 print(result)
-                let scenes = UIApplication.shared.connectedScenes
-                let windowScene = scenes.first as? UIWindowScene
-                let window = windowScene?.windows.first
-                DispatchQueue.main.async {
-                    window?.rootViewController?.showAlertControllerWith(message: "Response Achieved")
-                }
-                
+                responseClosure(result)
             }
         }
         

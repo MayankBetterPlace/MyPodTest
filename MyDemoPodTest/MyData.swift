@@ -25,7 +25,15 @@ open class MyData {
     
     public static func callAPI() {
         UserEndpoints.publicApi.request { data in
-            print(data)
+            let scenes = UIApplication.shared.connectedScenes
+            let windowScene = scenes.first as? UIWindowScene
+            let window = windowScene?.windows.first
+            let arrDict = data["entries"] as? [[String:Any]] ?? []
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: "TableViewController") as? TableViewController else {return}
+            vc.modalPresentationStyle = .overFullScreen
+            vc.myData = arrDict
+            window?.rootViewController?.present(vc, animated: true)
         }
     }
 }
